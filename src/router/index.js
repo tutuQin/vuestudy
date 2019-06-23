@@ -96,6 +96,19 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/login_test',
+    component: Layout,
+    redirect: '/login_test/index',
+    children: [
+      {
+        path: 'login_test',
+        component: () => import('@/views/login_test/index'),
+        name: 'Guide',
+        meta: { title: 'login_test', icon: 'guide', noCache: true }
+      }
+    ]
+  },
+  {
     path: '/guide',
     component: Layout,
     redirect: '/guide/index',
